@@ -1,15 +1,23 @@
 <html>
 <head>
     <title>Clean Splash Page</title>
-    <script type="text/javascript">
-        //alert('testing JavaScript');
-
-}    </script>
-
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
+        #toptext {
+        position:relative;
+        top: 75; /*[wherever you want it]*/
+        left:210; /*[wherever you want it]*/
+        color:darkgrey;
+        font-family: 'segoe UI';
+        font-size: .6rem;
+        font-weight: 500;
+        }
+
         #centralheading {
         position:relative;
-        top: 110; /*[wherever you want it]*/
+        top: 90; /*[wherever you want it]*/
         left:210; /*[wherever you want it]*/
         color:rgb(226, 114, 114);
         font-family:'Segoe UI';
@@ -18,7 +26,7 @@
         }
         #centraltext {
         position:relative;
-        top: 100; /*[wherever you want it]*/
+        top: 90; /*[wherever you want it]*/
         left:210; /*[wherever you want it]*/
         color:darkgrey;
         font-family: 'segoe UI';
@@ -68,11 +76,21 @@
 </head>
 
 <body>
+<div id="top-menu-placeholder"></div>
+
+  <script>
+    fetch('top-menu.htm')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('top-menu-placeholder').innerHTML = data;
+      });
+  </script>
+
     <div>
         <p style="display:inline-block;">
-        <img id='topmenu'src="topmenu.jpg" alt="menu">
+        <!--<img id='topmenu'src="topmenu.jpg" alt="menu">-->
         <!--<H1>Your Business</H1>-->
-        <p id='centraltext'>TREAT YOURSELF TO THE FASHION YOU DESERVE.</p><br/>
+        <p id='toptext'>TREAT YOURSELF TO THE FASHION YOU DESERVE.</p><br/>
         <span id='centralheading'>Millie's Millinery</span>
         <p id='centraltext'>Here is informative and accessible text
            about your company, letting customers know what you do<br/>and that you

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Clean Splash Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id="top-menu-placeholder"></div>
+
+  <script>
+    fetch('top-menu.htm')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('top-menu-placeholder').innerHTML = data;
+      });
+  </script>
+
+    <div>
+        <p style="display:inline-block;">
+            <p id='toptext'style="color:red">HERE'S HOW YOU CAN PARTNER WITH US TO ADD THE FINISHING TOUCH TO YOUR SPECIAL AND FAVOURITE GOWNS.</p><br/>
+            <!--<span id='centralheading'>Millie's Millinery</span>-->
+            <p id='centraltext' style="color:slateblue">Contact us at:</p>
+            <p id='centraltext'style="color:slateblue">milliemillinery@millie.com</p>
+            <p id='centraltext'style="color:slateblue">1-234-567-8910</p>
+            <img src="watchworks.jpg" alt="product">
+            <p><button class="button" text="Shop our distinct line">Shop our distinct line</button></p>
+        </p>
+    </div>
+</body>
+</html>
+
